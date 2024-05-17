@@ -7,7 +7,7 @@ TerminalFarkle brings the classic dice game of Farkle straight to your command l
 
 Roll the virtual dice, make strategic decisions, and rack up points as you aim to outscore your opponents and become the ultimate Farkle champion. With its minimalist interface and straightforward controls, TerminalFarkle promises hours of dice-rolling fun without any distractions.
 
-Key Features To Come:
+Key Features To Come
 
     Sleek Command-Line Interface: Enjoy a seamless gaming experience with TerminalFarkle's sleek command-line interface. Easy-to-read text and clear prompts ensure that gameplay is smooth and hassle-free.
 
