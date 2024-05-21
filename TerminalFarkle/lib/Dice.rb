@@ -35,7 +35,50 @@ module TerminalFarkle
         checkFours
         checkFives
         checkSixes
+
+        
+        # This will take the greatest value of the roll and apply it to the score automatically
+        if @ones > @twos or @ones > @threes or @ones > @fours or @ones > @fives or @ones > @sixes
+        # Delete all the ones
+            @playerList = @dice.reject { |x| x == 1 }
+            @points += @ones
+        
+        elsif @twos > @ones or @twos > @threes or @twos > @fours or @twos > @fives or @twos > @sixes
+            @playerList = @dice.reject { |x| x == 2 }
+            @points += @twos
+        
+        elsif @threes > @ones or @threes > @twos or @threes > @fours or @threes > @fives or @threes > @sixes
+            @playerList = @dice.reject { |x| x == 3 }
+            @points += @threes
+        
+        elsif @fours > @ones or @fours > @twos or @fours > @threes or @fours > @fives or @fours > @sixes
+            @playerList = @dice.reject { |x| x == 4 }
+            @points += @fours
+        
+        elsif @fives > @ones or @fives > @twos or @fives > @threes or @fives > @fours or @fives > @sixes
+            @playerList = @dice.reject { |x| x == 5 }
+            @points += @fives
+        
+        elsif @sixes > @ones or @sixes > @twos or @sixes > @threes or @sixes > @fours or @sixes > @fives
+            @playerList = @dice.reject { |x| x == 6 }
+            @points += @sixes
+        end
+        puts "Points: #{@points}"
       end
+
+    def player
+            if @points == 0
+                puts "You Lose"
+            elsif @points > 0
+                remainingDice = @playerList.count
+                @dice.clear
+                remainingDice.times { dice << rand(1..6) }
+                puts @dice
+        end
+      end
+
+
+            
 
       def checkOnes
         if @ones == 1 
